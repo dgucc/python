@@ -1,38 +1,51 @@
-# pip install --upgrade pip
+# python3 -m pip install --upgrade pip
 # pip install requests
-# pip freeze
+# pip install beautifulsoup4
 import requests
 from bs4 import BeautifulSoup
 import csv
 
-url = "https://www.gov.uk/search/news-and-communications"
-page = requests.get(url)
-soup = BeautifulSoup(page.content, 'html.parser')
+# requests to ccrek website 
+# return BeautifulSoup response
+def getPageContent(lang):
+    url = ""
+    if lang=="fr":
+        url = "https://www.rekenhof.be/FR/Publications/Themes.html" 
+    else:
+        url = "https://www.rekenhof.be/NL/Publicaties/Themas.html"
+    
+    HEADERS = ({'User-Agent':
+            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \
+            (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36',\
+            'Accept-Language': 'en-US, en;q=0.5'})
+    page = requests.get(url, headers=HEADERS)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    return soup
 
-#print(soup)
-#print(soup.find_all("a", class_='govuk-link'))
-#print(soup.find(id='logo'))
+# fetch theme's id and fr labels
+soup = getPageContent("fr")
+anchors = soup.select("div.thema a");
 
-class_name = "gem-c-document-list__item-title"
-titres = soup.find_all("a", class_=class_name)
-titres_text = []
-for titre in titres:
-	titres_text.append(titre.string)
-#print(titres_text)
+labels = []
+for anchor in anchors:
+    id=anchor['href'].split('=')[1]
+    label=anchor.text
+    labels.append({'id':id, 'fr':label})
 
+# fetch theme's id and nl labels
+soup = getPageContent("nl")
+anchors = soup.select("div.thema a");
 
-class_name = "gem-c-document-list__item-description"
-descriptions = soup.find_all("p", class_=class_name)
-descriptions_text = []
-for description in descriptions:
-	descriptions_text.append(description.string)
-#print(descriptions_text)
+for anchor in anchors:
+    id=anchor['href'].split('=')[1]
+    label=anchor.text
+    # add nl labels in list of labels
+    obj = list(filter(lambda x: x['id']==id, labels))[0]
+    obj['nl'] = label
 
-headers=["titre","description"]
-with open("gov_uk.csv", "w") as out_csv:
-	writer = csv.writer(out_csv, delimiter=',')
-	writer.writerow(headers)
-	for titre, description in zip(titres_text, descriptions_text):
-		line = [titre, description]
-		writer.writerow(line)
-
+headers=["id","fr","nl"]
+with open("themes.csv", "w") as out_csv:
+    writer = csv.writer(out_csv, delimiter=',')
+    writer.writerow(headers)
+    for label in labels:
+        writer.writerow(label.values())
