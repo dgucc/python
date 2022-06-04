@@ -41,10 +41,12 @@ anchors = soup.select("div.thema a");
 for anchor in anchors:
     id=anchor['href'].split('=')[1]
     label=anchor.text
-    # add nl labels in list of labels
+    # retrieve existing id in list of labels
+    # add "nl" property and value
     obj = list(filter(lambda x: x['id']==id, labels))[0]
     obj['nl'] = label
 
+# export into csv
 headers=["id","fr","nl"]
 with open("themes.csv", "w") as out_csv:
     writer = csv.writer(out_csv, delimiter=';')
