@@ -13,3 +13,8 @@ $ pip install beautifulsoup4
 ## Webpage : load csv into html table + add filter with jquery
 
 [Webpage as demo](https://github.com/dgucc/python/blob/main/index.html)  
+
+## Tips
+
+Use filter to find object in a list based on attribute value  
+`obj = list(filter(lambda x: x['id']==id, listOfObjects))[0]`
