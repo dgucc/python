@@ -44,7 +44,7 @@ for anchor in anchors:
     labels.append({'id':id, 'fr':label})
 
 # fetch theme's id and nl labels
-soup = getPageContent("nl")
+soup = getSoupParser("nl")
 anchors = soup.select("div.thema a");
 
 for anchor in anchors:
