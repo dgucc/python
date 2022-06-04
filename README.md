@@ -12,4 +12,4 @@ $ pip install beautifulsoup4
 ```
 ## Webpage : load csv into html table + add filter with jquery
 
-[Demo](https://github.com/dgucc/python/blob/main/index.html)  
+[Webpage as demo](https://github.com/dgucc/python/blob/main/index.html)  
