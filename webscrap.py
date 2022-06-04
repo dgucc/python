@@ -1,5 +1,12 @@
 # Webscraping with python + csv export
 # 
+# Purposes : fetch alls "Themes" fr-nl from website and export them in csv
+# Remarks : 
+#   url fr <> nl; 
+#   labels are identified by a Guid
+#   some labels contain "," => use ";" as separator in csv
+# 
+# Pre-requesites :
 # python3 -m pip install --upgrade pip
 # pip install requests
 # pip install beautifulsoup4
