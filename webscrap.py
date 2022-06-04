@@ -1,3 +1,5 @@
+# Websraping with python + csv export
+# 
 # python3 -m pip install --upgrade pip
 # pip install requests
 # pip install beautifulsoup4
@@ -45,7 +47,7 @@ for anchor in anchors:
 
 headers=["id","fr","nl"]
 with open("themes.csv", "w") as out_csv:
-    writer = csv.writer(out_csv, delimiter=',')
+    writer = csv.writer(out_csv, delimiter=';')
     writer.writerow(headers)
     for label in labels:
         writer.writerow(label.values())
