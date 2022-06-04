@@ -47,6 +47,9 @@ function loadCsvToHtmlTable(csv, htmlThead, targetDivId){
 			table_data += '</table>';
 			$(targetDivId).html(table_data);
 		}
+		error:function(jqXHR, exception) {
+    			console.log("Something rotten in the state of Danemark : [" + jqXHR.status + "] " + jqXHR);
+		}
 	});	
 }
 
