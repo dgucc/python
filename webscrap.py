@@ -17,7 +17,7 @@ import csv
 
 # requests to ccrek website 
 # return BeautifulSoup response
-def getPageContent(lang):
+def getSoupParser(lang):
     url = ""
     if lang=="fr":
         url = "https://www.rekenhof.be/FR/Publications/Themes.html" 
@@ -33,7 +33,7 @@ def getPageContent(lang):
     return soup
 
 # fetch theme's id and fr labels
-soup = getPageContent("fr")
+soup = getSoupParser("fr")
 anchors = soup.select("div.thema a");
 
 labels = []
