@@ -3,7 +3,8 @@
 # Purposes : fetch alls "Themes" fr-nl from website and export them in csv
 # Remarks : 
 #   url fr <> nl; 
-#   labels are identified by a Guid
+#   labels are stored in anchors <a>;
+#   labels are identified by a GUID cf. href attribute (need some extra parsing);
 #   some labels contain "," => use ";" as separator in csv
 # 
 # Pre-requesites :
