@@ -1,4 +1,4 @@
-# Websraping with python + csv export
+# Webscraping with python + csv export
 # 
 # python3 -m pip install --upgrade pip
 # pip install requests
