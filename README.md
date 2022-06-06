@@ -10,6 +10,10 @@ $ python3 -m pip install --upgrade pip
 $ pip install requests  
 $ pip install beautifulsoup4  
 ```
+## Execute it
+`$ python3 webscrap.py` 
+&rarr; themes.csv  
+
 ## Webpage : load csv into html table + add filter with jquery
 
 [Webpage as demo](https://github.com/dgucc/python/blob/main/index.html)  
