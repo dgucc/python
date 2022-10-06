@@ -56,7 +56,7 @@ for anchor in anchors:
     obj['nl'] = label
 
 # export into csv
-with open("themes.csv", "w") as out_csv:
+with open("themes.csv", "w", newline="") as out_csv:
     writer = csv.writer(out_csv, delimiter=';')
     headers=["id","fr","nl"]
     writer.writerow(headers)
