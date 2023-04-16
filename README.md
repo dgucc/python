@@ -16,7 +16,7 @@ $ pip install beautifulsoup4
 
 ## Webpage : load csv into html table + add filter with jquery
 
-[Webpage as demo](https://htmlpreview.github.io/?https://github.com/dgucc/python/blob/main/webscrap/index.html)  
+[Webpage as demo](https://github.com/dgucc/python/blob/main/webscrap/index.html)  
 
 ## Tips
 
