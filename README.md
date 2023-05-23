@@ -1,5 +1,5 @@
 # python
-
+![Avatar](https://github.com/dgucc/sandbox/blob/main/tips/images/avatar.gif)  
 ## Webscraping with python + export in csv format
 
 [Sample](https://github.com/dgucc/python/blob/main/webscrap/webscrap.py)
