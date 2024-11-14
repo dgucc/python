@@ -1,4 +1,4 @@
-# Python program to demonstrate
+# selenium + screenshot an entire webpage
 # python -m pip install selenium
 # https://github.com/mozilla/geckodriver/releases + adapt PATH for geckodriver.exe
 from selenium import webdriver
