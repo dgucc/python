@@ -1,5 +1,7 @@
 # selenium + screenshot an entire webpage
-# python -m pip install selenium
+# python3 -m venv venv
+# source venv/bin/activate
+# pip install selenium
 # https://github.com/mozilla/geckodriver/releases + adapt PATH for geckodriver.exe
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
