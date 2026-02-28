@@ -1,4 +1,15 @@
 # python
+
+```bash
+$ sudo apt-get install python3-full
+$ python3 -m pip install --upgrade pip
+```
+
+```bash
+$ sudo apt install python-is-python3
+$ sudo update-alternatives --config python
+```
+
 ![Avatar](https://github.com/dgucc/sandbox/blob/main/tips/images/avatar.gif)  
 ## Webscraping with python + export in csv format
 
@@ -6,8 +17,6 @@
 
 ## Pre-requesites
 ```bash
-$ sudo apt-get install python3-full
-$ python3 -m pip install --upgrade pip
 $ pip install requests  
 $ pip install beautifulsoup4  
 ```
