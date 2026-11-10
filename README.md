@@ -10,6 +10,10 @@ $ sudo apt install python-is-python3
 $ sudo update-alternatives --config python
 ```
 
+## pip install very slow -> disable ipv6
+
+`$ sysctl net.ipv6.conf.all.disable_ipv6=1` 
+
 ![Avatar](https://github.com/dgucc/sandbox/blob/main/tips/images/avatar.gif)  
 ## Webscraping with python + export in csv format
 
