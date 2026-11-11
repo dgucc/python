@@ -1,0 +1,17 @@
+# Ignore les fichiers de cache des outils Python
+__pycache__
+
+# Ignore le répertoire des scripts d'installation virtuels
+venv/
+
+# Ignore le cache de pip
+pip-cache
+
+# Ignore le dossier de logs
+logs/
+
+# Ignore les backups de la base de données (si applicable)
+db_backup*
+
+# Ignore les fichiers temporaires
+*.tmp

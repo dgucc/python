@@ -35,17 +35,23 @@ def get_combined_response(query):
         print(f"Error generating AI response: {e}")
         return "Sorry, there was an error generating a response for the internet search."
 
-query = "Qui est le vainqueur de Formule 1 en 2026?"
-response = get_combined_response(query)
 
-# Print the search results and the AI response
-search_results = search_internet(query)
-print("Search Results:")
-for result in search_results:
-    print(f"Title: {result['title']}")
-    print(f"URL: {result['href']}")
-    print(f"Snippet: {result['body']}\n")
+def main():
+    query = "Qui est le vainqueur de Formule 1 en 2026?"
+    response = get_combined_response(query)
 
-print("--------------------------------------------------------")
-print("AI Response:")
-print(response)
+    # Print the search results and the AI response
+    search_results = search_internet(query)
+    print("Search Results:")
+    for result in search_results:
+        print(f"Title: {result['title']}")
+        print(f"URL: {result['href']}")
+        print(f"Snippet: {result['body']}\n")
+
+    print("--------------------------------------------------------")
+    print("AI Response:")
+    print(response)
+
+
+if __name__ == '__main__':
+    main()
