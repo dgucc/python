@@ -2,9 +2,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run File",
-            "command": "./venv/bin/python ${file}",
+            "label": "Run Python Script",
             "type": "shell",
+            "command": "venv/bin/python main.py",
+            "args": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -13,7 +14,8 @@
                 "reveal": "always",
                 "panel": "new",
                 "focus": true
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }

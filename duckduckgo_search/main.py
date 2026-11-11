@@ -19,6 +19,7 @@ def get_combined_response(query):
 
     # Perform internet search
     search_results = search_internet(query)
+
     search_content = "\n".join([result['body'] for result in search_results])
 
     # Integrate search results into the AI response
@@ -38,7 +39,6 @@ def get_combined_response(query):
 
 def main():
     query = "Qui est le vainqueur de Formule 1 en 2026?"
-    response = get_combined_response(query)
 
     # Print the search results and the AI response
     search_results = search_internet(query)
@@ -50,6 +50,7 @@ def main():
 
     print("--------------------------------------------------------")
     print("AI Response:")
+    response = get_combined_response(query)
     print(response)
 
 
